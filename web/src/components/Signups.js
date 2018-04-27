@@ -5,7 +5,7 @@ import Skeleton from "react-loading-skeleton";
 class Signups extends React.Component {
   state = {}
   componentDidMount() {
-    axios.get('/api/signups').then(res => {
+    axios.get('https://asi-metrics.herokuapp.com/api/signups').then(res => {
       const signups = res.data;
       this.setState({signups: signups})
     })
