@@ -29,3 +29,5 @@ test:
 production:
   <<: *default
   database: db/asi_metrics_production
+  username: lwilsonsmith
+  password:
