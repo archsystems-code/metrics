@@ -1,1 +1,1 @@
-web: cd api && bin/rails server -p $PORT -e $RAILS_ENV; cd frontend && bin/boot
+web: cd api && bin/rails server -p $PORT -e $RAILS_ENV
