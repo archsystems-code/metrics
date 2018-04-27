@@ -46,6 +46,6 @@ class SampleRequestsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sample_request_params
-      params.require(:sample_request).permit(:id)
+      params.fetch(:sample_request, {})
     end
 end

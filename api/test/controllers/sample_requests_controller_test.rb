@@ -12,7 +12,7 @@ class SampleRequestsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sample_request" do
     assert_difference('SampleRequest.count') do
-      post sample_requests_url, params: { sample_request: { id: @sample_request.id } }, as: :json
+      post sample_requests_url, params: { sample_request: {  } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class SampleRequestsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sample_request" do
-    patch sample_request_url(@sample_request), params: { sample_request: { id: @sample_request.id } }, as: :json
+    patch sample_request_url(@sample_request), params: { sample_request: {  } }, as: :json
     assert_response 200
   end
 
