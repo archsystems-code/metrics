@@ -1,1 +1,1 @@
-web: cd frontend && bin/boot
+web: bin/boot
