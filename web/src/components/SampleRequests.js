@@ -4,7 +4,7 @@ import Skeleton from "react-loading-skeleton";
 
 class SampleRequests extends React.Component {
   state = {
-    month: new Date(Date.now()).getMonth()
+    date: new Date(Date.now())
   }
   componentDidMount() {
     axios.get('https://asi-metrics.herokuapp.com/api/sample_requests').then(res => {
@@ -15,9 +15,9 @@ class SampleRequests extends React.Component {
   render() {
     let totalRequests = []
     if (this.state.sampleRequests) {
-      totalRequests = this.state.sampleRequests.filter(request => new Date(request.created_at).getMonth() === this.state.month)
+      totalRequests = this.state.sampleRequests.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
-    return <div> {totalRequests.length ? totalRequests.length : <Skeleton />} </div>
+    return <div> {totalRequests.length ? <div><p>Total Signups for {this.state.date.toLocaleString("en-us", {month: "long"})}</p><p>{totalRequests.length}</p></div> : <Skeleton />} </div>
   }
 }
 
