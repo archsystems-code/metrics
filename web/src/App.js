@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Signups from './components/Signups';
+import SampleRequests from './components/SampleRequests';
 import logo from './logo.svg';
 import './App.css';
 
@@ -13,6 +14,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Signups />
+        <SampleRequests />
       </div>
     );
   }
