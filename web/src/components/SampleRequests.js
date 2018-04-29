@@ -3,8 +3,11 @@ import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 
 class SampleRequests extends React.Component {
-  state = {
-    date: new Date(Date.now())
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date(Date.now())
+    }
   }
   componentDidMount() {
     axios.get('https://asi-metrics.herokuapp.com/api/sample_requests').then(res => {
