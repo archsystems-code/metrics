@@ -20,7 +20,7 @@ class SampleRequests extends React.Component {
     if (this.state.sampleRequests) {
       totalRequests = this.state.sampleRequests.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
-    return <div> {totalRequests.length ? <div><p>Total Signups for {this.state.date.toLocaleString("en-us", {month: "long"})}</p><p>{totalRequests.length}</p></div> : <Skeleton />} </div>
+    return <div> {totalRequests.length ? <div><p>Total Sample Requests for {this.state.date.toLocaleString("en-us", {month: "long"})}</p><p>{totalRequests.length}</p></div> : <Skeleton />} </div>
   }
 }
 
