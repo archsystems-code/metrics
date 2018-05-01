@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans|Hind+Siliguri|Montserrat:200,400|Roboto:300,400,500');
 
-.App {
-	text-align: center;
-}
-
 .App-logo {
 	height: 120px;
 }
@@ -16,4 +12,11 @@
 	font-weight: 200;
 	font-size: 30px;
 	line-height: 40px;
+	text-align: center;
+}
+
+.App-container {
+	max-width: 1300px;
+	display: flex;
+	justify-content: space-evenly;
 }

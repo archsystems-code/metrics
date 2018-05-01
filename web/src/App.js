@@ -8,14 +8,16 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">ASI Metrics</h1>
         </header>
-        <Signups />
-        <SampleRequests />
-      </div>
+        <div className="App-container">
+          <Signups />
+          <SampleRequests />
+        </div>
+      </React.Fragment>
     );
   }
 }
