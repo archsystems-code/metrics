@@ -7,13 +7,16 @@
 .App-header {
 	background-color: #F3F2F2;
 	padding: 20px;
-	color: #434343;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 200;
-	font-size: 30px;
-	line-height: 40px;
 	text-align: center;
+	h1 {
+		color: #434343;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 200;
+		font-size: 45px;
+		line-height: 55px;
+	}
 }
+
 
 .App-container {
 	max-width: 1300px;
