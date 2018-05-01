@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from "axios";
 import Skeleton from "react-loading-skeleton";
+import Paper from 'material-ui/Paper';
 
 class Signups extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date(Date.now())
+      date: props.date
     }
   }
   componentDidMount() {
@@ -16,11 +17,21 @@ class Signups extends React.Component {
     })
   }
   render() {
+    const paperStyle = {
+      height: 125,
+      width: 125,
+      margin: 20,
+      padding: 10,
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    };
     let totalSignups = []
     if (this.state.signups) {
       totalSignups = this.state.signups.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
-    return <div> {totalSignups.length ? <div><p>Total Signups for {this.state.date.toLocaleString("en-us", { month: "long"})}</p> <p>{totalSignups.length}</p></div>: <Skeleton />} </div>
+    return <Paper style={paperStyle} zDepth={2}> {totalSignups.length ? <div><p>Signups</p> <p>{totalSignups.length}</p></div>: <Skeleton />} </Paper>
   }
 }
 
