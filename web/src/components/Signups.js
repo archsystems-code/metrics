@@ -25,7 +25,8 @@ class Signups extends React.Component {
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor: '#AD619D'
     };
     let totalSignups = []
     if (this.state.signups) {

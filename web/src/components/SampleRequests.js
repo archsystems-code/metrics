@@ -25,7 +25,8 @@ class SampleRequests extends React.Component {
       textAlign: 'center',
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor: '#F3DBB7'
     };
     let totalRequests = []
     if (this.state.sampleRequests) {
