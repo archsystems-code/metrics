@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans|Hind+Siliguri|Montserrat:200,400|Roboto:300,400,500');
+
 .App {
 	text-align: center;
 }
 
 .App-logo {
-	height: 60px;
+	height: 120px;
 }
 
 .App-header {
-	background-color: #222;
-	height: 150px;
+	background-color: #F3F2F2;
 	padding: 20px;
-	color: white;
-}
-
-.App-intro {
-	font-size: x-large;
+	color: #434343;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+	font-size: 30px;
+	line-height: 40px;
 }
