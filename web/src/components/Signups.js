@@ -29,7 +29,7 @@ class Signups extends React.Component {
       backgroundColor: '#AD619D'
     };
     let totalSignups = []
-    if (this.state.signups) {
+    if (this.state.signups && this.state.signups.length) {
       totalSignups = this.state.signups.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
     return <Paper style={paperStyle} zDepth={2}> {totalSignups.length ? <div><p>Signups</p> <p>{totalSignups.length}</p></div>: <Skeleton />} </Paper>

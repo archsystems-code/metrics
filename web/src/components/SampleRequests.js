@@ -29,7 +29,7 @@ class SampleRequests extends React.Component {
       backgroundColor: '#F3DBB7'
     };
     let totalRequests = []
-    if (this.state.sampleRequests) {
+    if (this.state.sampleRequests && this.state.sampleRequests.length) {
       totalRequests = this.state.sampleRequests.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
     return <Paper style={paperStyle} zDepth={2}> {totalRequests.length ? <div><p>Sample Requests</p><p>{totalRequests.length}</p></div> : <Skeleton />} </Paper>
