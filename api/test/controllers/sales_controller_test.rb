@@ -12,7 +12,7 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sale" do
     assert_difference('Sale.count') do
-      post sales_url, params: { sale: {  } }, as: :json
+      post sales_url, params: { sale: { total: @sale.total } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class SalesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sale" do
-    patch sale_url(@sale), params: { sale: {  } }, as: :json
+    patch sale_url(@sale), params: { sale: { total: @sale.total } }, as: :json
     assert_response 200
   end
 

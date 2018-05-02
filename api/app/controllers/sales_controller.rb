@@ -15,8 +15,8 @@ class SalesController < ApplicationController
 
   # POST /sales
   def create
-    @sale = Sale.new(sale_params)
-
+    total = fetch_total_from_email(params)
+    @sale = Sale.new(total: total)
     if @sale.save
       render json: @sale, status: :created, location: @sale
     else
@@ -46,6 +46,20 @@ class SalesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sale_params
-      params.fetch(:sale, {})
+      params.require(:sale).permit(:total)
+    end
+
+    def fetch_total_from_email(params)
+      is_order_total = false
+      total = nil
+      document = Nokogiri::HTML(params[:body_html])
+      document.search("p").each do |p|
+        if is_order_total and p.content != ""
+          return total = p.content
+        end
+        if p.content == "Order Total"
+          is_order_total = true
+        end
+      end
     end
 end
