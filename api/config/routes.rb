@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   scope ENV['MYAPP_RELATIVE_URL_ROOT'] || '/' do
     resources :signups
     resources :sample_requests
+    resources :sales
   end
 end
