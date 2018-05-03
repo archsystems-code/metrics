@@ -32,7 +32,7 @@ class Signups extends React.Component {
     if (this.state.signups && this.state.signups.length) {
       totalSignups = this.state.signups.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
-    return <Paper style={paperStyle} zDepth={2}> {totalSignups.length ? <div><p>Signups</p> <p>{totalSignups.length}</p></div>: <Skeleton />} </Paper>
+    return <Paper style={paperStyle} zDepth={2}> {totalSignups.length ? <div><h5>Signups</h5> <p>{totalSignups.length}</p></div>: <Skeleton />} </Paper>
   }
 }
 

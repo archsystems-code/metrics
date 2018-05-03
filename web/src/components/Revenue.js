@@ -31,7 +31,7 @@ class Revenue extends React.Component {
     if (this.state.sales && this.state.sales.length) {
       totalSales = this.state.sales.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth()).map(sale => Number(sale.total.replace(/[^0-9\\.-]+/g,""))).reduce((acc, val) => acc + val)
     }
-    return <Paper style={paperStyle} zDepth={2}> <div><p>Total Revenue</p><p>${totalSales}</p></div></Paper>
+    return <Paper style={paperStyle} zDepth={2}> <div><h5>Total Revenue</h5><p>${totalSales}</p></div></Paper>
   }
 }
 

@@ -32,7 +32,7 @@ class SampleRequests extends React.Component {
     if (this.state.sampleRequests && this.state.sampleRequests.length) {
       totalRequests = this.state.sampleRequests.filter(request => new Date(request.created_at).getMonth() === this.state.date.getMonth())
     }
-    return <Paper style={paperStyle} zDepth={2}> {totalRequests.length ? <div><p>Sample Requests</p><p>{totalRequests.length}</p></div> : <Skeleton />} </Paper>
+    return <Paper style={paperStyle} zDepth={2}> {totalRequests.length ? <div><h5>Sample Requests</h5><p>{totalRequests.length}</p></div> : <Skeleton />} </Paper>
   }
 }
 
