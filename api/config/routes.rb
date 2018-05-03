@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :signups
     resources :sample_requests
     resources :sales
+    resources :chats
     end
 end
